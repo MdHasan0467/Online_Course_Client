@@ -3,67 +3,58 @@ import { Link } from 'react-router-dom';
 
 const SignUp = () => {
     return (
-			<div>
-				<section className='text-gray-600 body-font'>
-					<div className='container px-5 py-24 mx-auto flex flex-wrap items-center'>
-						<div className='lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0 pr-0'>
-							<h1 className='title-font font-medium text-3xl text-gray-900'>
-								Slow-carb next level shoindcgoitch ethical authentic, poko
-								scenester
-							</h1>
-							<p className='leading-relaxed mt-4'>
-								Poke slow-carb mixtape knausgaard, typewriter street art
-								gentrify hammock starladder roathse. Craies vegan tousled etsy
-								austin.
-							</p>
+			<div className='w-11/12 mx-auto mt-5'>
+				<section className='text-gray-600  body-font flex justify-center '>
+					<div className='w-72 shadow-lg shadow-slate-700 p-5  rounded-lg'>
+						<h2 className='text-gray-900 text-lg text-center font-medium title-font mb-5'>
+							Log in
+						</h2>
+						<div className='relative mb-4'>
+							<label for='email' className='leading-7 text-sm text-gray-600'>
+								full Name
+							</label>
+							<input
+								type='text'
+								id='name'
+								name='name'
+								className='w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out'
+							/>
 						</div>
-						<div className='lg:w-2/6 md:w-1/2 bg-gray-100 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0'>
-							<h2 className='text-gray-900 text-lg font-medium title-font mb-5'>
-								Sign Up
-							</h2>
-							<div className='relative mb-4'>
-								<label for='email' className='leading-7 text-sm text-gray-600'>
-									Name
-								</label>
-								<input
-									type='text'
-									id='text'
-									name='Name'
-									className='w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out'
-								/>
-							</div>
-							<div className='relative mb-4'>
-								<label for='email' className='leading-7 text-sm text-gray-600'>
-									Email
-								</label>
-								<input
-									type='email'
-									id='email'
-									name='email'
-									className='w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out'
-								/>
-							</div>
-							<div className='relative mb-2'>
-								<label for='email' className='leading-7 text-sm text-gray-600'>
-									Password
-								</label>
-								<input
-									type='password'
-									id='password'
-									name='password'
-									className='w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out'
-								/>
-							</div>
-								<Link to='/login'>
-									<a href='#' className='text-xs hover:underline text-gray-500 mt-3'>
-										Already have an account?
-									</a>
-								</Link>
-							<br />
-							<button className='text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg'>
-								Log in
-							</button>
+						<div className='relative mb-4'>
+							<label for='email' className='leading-7 text-sm text-gray-600'>
+								Email
+							</label>
+							<input
+								type='email'
+								id='email'
+								name='email'
+								className='w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out'
+							/>
 						</div>
+						<div className='relative mb-2'>
+							<label for='email' className='leading-7 text-sm text-gray-600'>
+								Password
+							</label>
+							<input
+								type='password'
+								id='password'
+								name='password'
+								className='w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out'
+							/>
+						</div>
+						<Link to='/login'>
+							<a
+								href='#'
+								className='text-xs hover:underline text-gray-500 mt-3'
+							>
+								Already have an account?
+							</a>
+						</Link>
+						<br />
+						<br />
+						<button className='text-white w-full bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg'>
+							Log in
+						</button>
 					</div>
 				</section>
 			</div>
