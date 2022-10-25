@@ -16,6 +16,10 @@ function App() {
           element:<Home></Home>
         },
         {
+          path: '/home',
+          element:<Home></Home>
+        },
+        {
           path: '/login',
           element:<Login></Login>
         },
@@ -28,7 +32,7 @@ function App() {
 
   ])
   return (
-    <div className="App">
+    <div>
       <RouterProvider router={router}></RouterProvider>
     </div>
   );
