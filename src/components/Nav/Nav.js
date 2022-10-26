@@ -6,10 +6,16 @@ import { authContext } from '../../context/AuthProvider';
 
 const Nav = () => {
 	const [show, setShow] = useState();
-	const { user } = useContext(authContext);
+	const { user, logOut } = useContext(authContext);
 	const ToggleData = () => {
 		setShow(!show);
 	};
+
+	const handlelogOut = () => {
+		logOut()
+			.then(() => { })
+		.catch(error => console.error(error))
+	}
 	return (
 		<div>
 			<div className='navbar bg-base-100'>
@@ -128,17 +134,39 @@ const Nav = () => {
 					</ul>
 				</div>
 				<div className='navbar-end'>
-					{user ? 
-						<div className='avatar online'>
-							<div className='w-[50px] rounded-full'>
-								<img src={user.photoURL} />
-							</div>
+					{user ? (
+						<div className='dropdown dropdown-end'>
+							<label
+								tabIndex={0}
+								className='btn btn-ghost btn-circle online avatar'
+							>
+								<div className='w-10 rounded-full '>
+									<img src={user.photoURL} />
+								</div>
+							</label>
+							<ul
+								tabIndex={0}
+								className='shadow-xl menu menu-compact dropdown-content bg-blue-800 text-white rounded-box w-52'
+							>
+								<li>
+									<a className='justify-between'>
+										{user.displayName}
+										<span className='badge'>New</span>
+									</a>
+								</li>
+								<li>
+									<a>Settings</a>
+								</li>
+								<li>
+									<a onClick={handlelogOut}>Logout</a>
+								</li>
+							</ul>
 						</div>
-					 : 
+					) : (
 						<Link to='/login'>
 							<button className='btn btn-secondary'>Login</button>
 						</Link>
-					}
+					)}
 				</div>
 			</div>
 		</div>

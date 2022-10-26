@@ -42,6 +42,14 @@ function App() {
 						fetch(`http://localhost:5000/courses/${params.id}`),
 					element: <Topics></Topics>,
 				},
+					{
+						path: '/course/checkout/:id',
+						loader: ({ params }) =>
+							fetch(
+								`http://localhost:5000/courses/course/${params.id}`
+							),
+						element : <Checkout></Checkout>
+					},
 
 				{
 					path: '/blog',
