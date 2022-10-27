@@ -8,7 +8,7 @@ const Blog = () => {
 						<div className='-my-8 divide-y-2 divide-gray-100'>
 							<div className='py-8 flex flex-wrap md:flex-nowrap'>
 								<div className='md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col'>
-									<span className='font-semibold text-2xl title-font text-gray-700'>
+									<span className='font-bold text-2xl title-font text-gray-700'>
 										Cybersecurity
 									</span>
 									<span className='mt-1 text-gray-500 text-sm'>
@@ -51,7 +51,7 @@ const Blog = () => {
 							</div>
 							<div className='py-8 flex flex-wrap md:flex-nowrap'>
 								<div className='md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col'>
-									<span className='font-semibold text-2xl title-font text-gray-700'>
+									<span className='font-bold text-2xl title-font text-gray-700'>
 										Front-end Developer
 									</span>
 									<span className='mt-1 text-gray-500 text-sm'>
@@ -94,7 +94,7 @@ const Blog = () => {
 							</div>
 							<div className='py-8 flex flex-wrap md:flex-nowrap'>
 								<div className='md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col'>
-									<span className='font-semibold text-2xl title-font text-gray-700'>
+									<span className='font-bold text-2xl title-font text-gray-700'>
 										Full Stack Developer
 									</span>
 									<span className='text-sm text-gray-500'>12 Jun 2023</span>

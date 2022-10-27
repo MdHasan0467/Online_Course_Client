@@ -11,7 +11,7 @@ const Course = ({ courses }) => {
 					<div className=' flex flex-wrap'>
 						<img
 							alt='ecommerce'
-							className='lg:w-[300px] bg-primary rounded-lg'
+							className='lg:w-[300px] bg-black rounded-lg'
 							src={image}
 						/>
 						<div className='lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0'>

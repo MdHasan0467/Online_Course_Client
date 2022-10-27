@@ -60,12 +60,12 @@ const Nav = () => {
 							<li className=''>
 								<button className='bg-white' onClick={ToggleData}>
 									{!show ? (
-										<h1 className='bg-gray-800 px-3 py-2 rounded-full text-white'>
+										<h1 className='bg-gray-800 px-3 py-2 rounded-full rounded-t-none rounded text-white'>
 											{' '}
 											Dark{' '}
 										</h1>
 									) : (
-										<h1 className=' px-3 py-2 bg-red-700 rounded-full text-white'>
+										<h1 className=' px-3 py-2 bg-secondary rounded-full text-white'>
 											Light{' '}
 										</h1>
 									)}
@@ -101,7 +101,7 @@ const Nav = () => {
 										Dark{' '}
 									</h1>
 								) : (
-									<h1 className=' px-3 py-2 bg-red-700 rounded-full text-white'>
+									<h1 className=' px-3 py-2 bg-secondary rounded-full text-white'>
 										Light{' '}
 									</h1>
 								)}
@@ -118,27 +118,27 @@ const Nav = () => {
 					<ul className='menu menu-horizontal p-0'>
 						<Link to='/home'>
 							<li>
-								<a className='hover:text-orange-600'>Home</a>
+								<a className=' hover:text-secondary'>Home</a>
 							</li>
 						</Link>
 						<Link to='/courses'>
 							<li>
-								<a className='hover:text-orange-600'>Courses</a>
+								<a className=' hover:text-secondary'>Courses</a>
 							</li>
 						</Link>
 						<Link to='/blog'>
 							<li>
-								<a className='hover:text-orange-600'>Blog</a>
+								<a className=' hover:text-secondary'>Blog</a>
 							</li>
 						</Link>
 						<Link to='/faq'>
 							<li>
-								<a className='hover:text-orange-600'>FAQ</a>
+								<a className=' hover:text-secondary'>FAQ</a>
 							</li>
 						</Link>
 						<Link to='/contact'>
 							<li>
-								<a className='hover:text-orange-600'>Contact</a>
+								<a className=' hover:text-secondary'>Contact</a>
 							</li>
 						</Link>
 					</ul>
@@ -150,7 +150,7 @@ const Nav = () => {
 								tabIndex={0}
 								className='btn btn-ghost btn-circle online avatar'
 							>
-								<div className='w-10 rounded-full '>
+								<div className='w-10 rounded-full tooltip' data-tip='hello'>
 									<img src={user.photoURL} />
 								</div>
 							</label>
@@ -159,16 +159,18 @@ const Nav = () => {
 								className='shadow-xl menu menu-compact dropdown-content bg-blue-800 text-white rounded-box w-52'
 							>
 								<li>
-									<a className='justify-between'>
+									<a className='justify-between hover:text-secondary'>
 										{user.displayName}
 										<span className='badge'>New</span>
 									</a>
 								</li>
 								<li>
-									<a>Settings</a>
+									<a className=' hover:text-secondary'>Settings</a>
 								</li>
 								<li>
-									<a onClick={handleLogOut}>Logout</a>
+									<a onClick={handleLogOut} className=' hover:text-secondary'>
+										Logout
+									</a>
 								</li>
 							</ul>
 						</div>
