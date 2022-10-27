@@ -1,5 +1,8 @@
-Github:
-Live:
+Client Code: "https://github.com/programming-hero-web-course1/b610-learning-platform-client-side-MdHasan0467"
+
+Server Code: "https://github.com/programming-hero-web-course1/b610-lerning-platform-server-side-MdHasan0467"
+
+Live Site: https://assignment-ten-625db.web.app/
 
 * The assignment about a learning institute 
 * The institute teach students about Programming Language.
