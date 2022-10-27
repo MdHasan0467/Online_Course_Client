@@ -50,6 +50,17 @@ const FAQ = () => {
 									authenticated routes If he is authenticated (Logged in).
 								</p>
 							</details>
+							<details className='w-full border rounded-lg'>
+								<summary className='px-4 py-6 focus:outline-none text-xl font-semibold focus-visible:ring-violet-400'>
+									What is node js and how does it work?
+								</summary>
+								<p className='px-4 py-6 pt-0 ml-4 -mt-4 dark:text-gray-400'>
+									Node js is really poular because it lets you go out of the
+									browser to be able to do certain things like for example
+									accesing files in the computer,etc.Node js is also popular
+									because it uses javascript
+								</p>
+							</details>
 						</div>
 					</div>
 				</section>
