@@ -5,7 +5,7 @@ import '../custom.css'
 const Course = ({ courses }) => {
 	const { name, id, image, details, course_fee } = courses;
 	return (
-		<div className='border rounded-lg mt-4'>
+		<div className='border bg-slate-100 rounded-lg mt-4 p-5'>
 			<section className='text-gray-600 body-font overflow-hidden'>
 				<div className='container '>
 					<div className=' flex flex-wrap'>
@@ -137,7 +137,7 @@ const Course = ({ courses }) => {
 										type='button'
 										className='flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md btn btn-secondary'
 									>
-										Get Premium
+										Details
 									</button>
 								</Link>
 								<button className='rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4'>

@@ -2,8 +2,10 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
 import Details from './components/Aside/Details/Details';
 import Blog from './components/Blog/Blog';
+import Checkout from './components/Checkout/Checkout';
 import Contact from './components/Contact/Contact';
 import Courses from './components/Courses/Courses';
+import Error from './components/Error/Error';
 import FAQ from './components/FAQ/FAQ';
 import Home from './components/Home/Home';
 import Login from './components/Login/Login';
@@ -38,6 +40,10 @@ function App() {
 					element: <Contact></Contact>,
 				},
 				{
+					path: '*',
+					element: <Error></Error>,
+				},
+				{
 					path: '/login',
 					element: <Login></Login>,
 				},
@@ -53,9 +59,17 @@ function App() {
 				},
 				{
 					path: '/course/:id',
+					element:<Details></Details>,
+					loader: ({ params }) =>
+						fetch(
+							`https://assignment-ten-server-bice.vercel.app/course/${params.id}`
+						),
+				},
+				{
+					path: '/course/checkout/:id',
 					element: (
 						<PrivateRoute>
-							<Details></Details>
+							<Checkout></Checkout>
 						</PrivateRoute>
 					),
 					loader: ({ params }) =>

@@ -23,11 +23,8 @@ const Details = () => {
 							<img className='w-72 mx-auto my-4' src={image} alt='' />
 							<h2 className='text-2xl font-serif font-bold'>{name}</h2>
 							<p className='mt-4 dark:text-gray-400 text-justify'>{details}</p>
-							<div className='flex items-center mt-8 space-x-4'>
+							<div className='lg:flex items-center mt-8 space-x-4'>
 								<div className='flex justify-between w-full'>
-									<Link to='/courses'>
-										<button className='btn btn-secondary'>Back</button>
-									</Link>
 									<h3 className='text-lg text-secondary font-medium'>
 										<span className='font-semibold font-serif text-white'>
 											Course Fee :
@@ -36,6 +33,19 @@ const Details = () => {
 									</h3>
 									<p>Course ID: {id}</p>
 								</div>
+								<Link to='/courses'>
+									<button className='flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md btn btn-secondary'>
+										Back
+									</button>
+								</Link>
+								<Link to={`/course/checkout/${id}`}>
+									<button
+										type='button'
+										className='flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md btn btn-secondary'
+									>
+										Get Premium
+									</button>
+								</Link>
 							</div>
 						</article>
 					</div>

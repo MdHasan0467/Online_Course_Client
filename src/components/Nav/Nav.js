@@ -3,6 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 import { authContext } from '../../context/AuthProvider';
+// import { BsMoonFill, BsSunFill } from 'react-icons/bs';
 
 const Nav = () => {
 	const [show, setShow] = useState();
@@ -57,23 +58,78 @@ const Nav = () => {
 									<a>Blog</a>
 								</li>
 							</Link>
-							<li className=''>
-								<button className='bg-white' onClick={ToggleData}>
+							<li>
+								<button  onClick={ToggleData}>
 									{!show ? (
-										<h1 className='bg-gray-800 px-3 py-2 rounded-full rounded-t-none rounded text-white'>
-											{' '}
-											Dark{' '}
+										<h1 className=' py-2 rounded-full rounded-t-none rounded-b-none'>
+											<svg
+												xmlns='http://www.w3.org/2000/svg'
+												fill='none'
+												viewBox='0 0 24 24'
+												strokeWidth={1.5}
+												stroke='currentColor'
+												className='w-6 h-6 bg-slate-900 text-white rounded-full'
+											>
+												<path
+													strokeLinecap='round'
+													strokeLinejoin='round'
+													d='M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z'
+												/>
+											</svg>
 										</h1>
 									) : (
-										<h1 className=' px-3 py-2 bg-secondary rounded-full text-white'>
-											Light{' '}
+										<h1 className=' px-3 py-2 rounded-full'>
+											<svg
+												xmlns='http://www.w3.org/2000/svg'
+												fill='none'
+												viewBox='0 0 24 24'
+												strokeWidth={1.5}
+												stroke='currentColor'
+												className='w-6 h-6 bg-slate-500 rounded-full'
+											>
+												<path
+													strokeLinecap='round'
+													strokeLinejoin='round'
+													d='M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z'
+												/>
+											</svg>
 										</h1>
 									)}
 								</button>
 								{show ? (
-									<h1 className='text-white'> Dark </h1>
+									<h1 className='text-white'>
+										<svg
+											xmlns='http://www.w3.org/2000/svg'
+											fill='none'
+											viewBox='0 0 24 24'
+											strokeWidth={1.5}
+											stroke='currentColor'
+											className='w-6 h-6'
+										>
+											<path
+												strokeLinecap='round'
+												strokeLinejoin='round'
+												d='M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z'
+											/>
+										</svg>
+									</h1>
 								) : (
-									<h1 className='text-white'>Light </h1>
+									<h1 className='text-white'>
+										<svg
+											xmlns='http://www.w3.org/2000/svg'
+											fill='none'
+											viewBox='0 0 24 24'
+											strokeWidth={1.5}
+											stroke='currentColor'
+											className='w-6 h-6'
+										>
+											<path
+												strokeLinecap='round'
+												strokeLinejoin='round'
+												d='M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z'
+											/>
+										</svg>
+									</h1>
 								)}
 							</li>
 						</ul>
@@ -93,23 +149,78 @@ const Nav = () => {
 							</a>
 						</Link>
 
-						<div className='lg:block hidden ml-5'>
-							<button className='bg-white mt-3' onClick={ToggleData}>
+						<div className='lg:block  hidden ml-5'>
+							<button className='bg-white' onClick={ToggleData}>
 								{!show ? (
-									<h1 className='bg-gray-800 px-3 py-2 rounded-full text-white'>
-										{' '}
-										Dark{' '}
+									<h1 className='  text-white py-2 rounded-full rounded-t-none rounded-b-none'>
+										<svg
+											xmlns='http://www.w3.org/2000/svg'
+											fill='none'
+											viewBox='0 0 24 24'
+											strokeWidth={1.5}
+											stroke='currentColor'
+											className='w-6 bg-slate-800 h-6 rounded-full'
+										>
+											<path
+												strokeLinecap='round'
+												strokeLinejoin='round'
+												d='M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z'
+											/>
+										</svg>
 									</h1>
 								) : (
-									<h1 className=' px-3 py-2 bg-secondary rounded-full text-white'>
-										Light{' '}
+									<h1 className=' py-2 rounded-full rounded-t-none rounded-b-none'>
+										<svg
+											xmlns='http://www.w3.org/2000/svg'
+											fill='none'
+											viewBox='0 0 24 24'
+											strokeWidth={1.5}
+											stroke='currentColor'
+											className='w-6 h-6 bg-slate-400 rounded-full'
+										>
+											<path
+												strokeLinecap='round'
+												strokeLinejoin='round'
+												d='M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z'
+											/>
+										</svg>
 									</h1>
 								)}
 							</button>
 							{show ? (
-								<h1 className='text-white'> Dark </h1>
+								<h1 className='text-white'>
+									<svg
+										xmlns='http://www.w3.org/2000/svg'
+										fill='none'
+										viewBox='0 0 24 24'
+										strokeWidth={1.5}
+										stroke='currentColor'
+										className='w-6 h-6'
+									>
+										<path
+											strokeLinecap='round'
+											strokeLinejoin='round'
+											d='M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z'
+										/>
+									</svg>
+								</h1>
 							) : (
-								<h1 className='text-white'>Light </h1>
+								<h1 className='text-white'>
+									<svg
+										xmlns='http://www.w3.org/2000/svg'
+										fill='none'
+										viewBox='0 0 24 24'
+										strokeWidth={1.5}
+										stroke='currentColor'
+										className='w-6 h-6'
+									>
+										<path
+											strokeLinecap='round'
+											strokeLinejoin='round'
+											d='M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z'
+										/>
+									</svg>
+								</h1>
 							)}
 						</div>
 					</div>
@@ -146,17 +257,14 @@ const Nav = () => {
 				<div className='navbar-end'>
 					{user ? (
 						<div className='dropdown dropdown-end'>
-							<label
-								tabIndex={0}
-								className='btn btn-ghost btn-circle online avatar'
-							>
-								<div className='w-10 rounded-full tooltip' data-tip='hello'>
+							<label tabIndex={0} className='btn btn-ghost btn-circle avatar'>
+								<div className='w-[50px] rounded-full'>
 									<img src={user.photoURL} />
 								</div>
 							</label>
 							<ul
 								tabIndex={0}
-								className='shadow-xl menu menu-compact dropdown-content bg-blue-800 text-white rounded-box w-52'
+								className='mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52'
 							>
 								<li>
 									<a className='justify-between hover:text-secondary'>
