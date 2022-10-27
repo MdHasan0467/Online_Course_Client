@@ -126,9 +126,19 @@ const Nav = () => {
 								<a className='hover:text-orange-600'>Courses</a>
 							</li>
 						</Link>
-						<Link to=''>
+						<Link to='/blog'>
 							<li>
 								<a className='hover:text-orange-600'>Blog</a>
+							</li>
+						</Link>
+						<Link to='/faq'>
+							<li>
+								<a className='hover:text-orange-600'>FAQ</a>
+							</li>
+						</Link>
+						<Link to='/contact'>
+							<li>
+								<a className='hover:text-orange-600'>Contact</a>
 							</li>
 						</Link>
 					</ul>
