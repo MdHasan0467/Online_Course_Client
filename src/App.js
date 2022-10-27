@@ -5,6 +5,7 @@ import Blog from './components/Blog/Blog';
 import Courses from './components/Courses/Courses';
 import Home from './components/Home/Home';
 import Login from './components/Login/Login';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import SignUp from './components/SignUp/SignUp';
 import Main from './layouts/Main/Main';
 
@@ -42,10 +43,14 @@ function App() {
 				},
 				{
 					path: '/course/:id',
-					element: <Details></Details>,
+					element: (
+						<PrivateRoute>
+							<Details></Details>
+						</PrivateRoute>
+					),
 					loader: ({ params }) =>
 						fetch(
-							`https://assignment-ten-server-bice.vercel.app/courses/${params.id}`
+							`https://assignment-ten-server-bice.vercel.app/course/${params.id}`
 						),
 				},
 			],

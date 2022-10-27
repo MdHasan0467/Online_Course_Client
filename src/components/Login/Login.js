@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { authContext } from '../../context/AuthProvider';
 import { FcGoogle } from 'react-icons/fc';
 import { BsFacebook, BsGithub } from 'react-icons/bs';
@@ -13,6 +13,9 @@ const Login = () => {
 	// const [userEmail, setUserEmail] = useState('');
 	const [success, setSuccess] = useState(false);
 	const [passwordError, setPasswordError] = useState('');
+	const navigate = useNavigate();
+	const location = useLocation();
+	const from = location.state?.form?.pathname || '/';
 	const { logIn, googleSignUp, githubSignUp, facebookSignUp } =
 		useContext(authContext);
 
@@ -72,6 +75,7 @@ const Login = () => {
 				console.log(user);
 				setSuccess(true);
 				form.reset();
+				navigate(from, { replace: true });
 			})
 			.catch((error) => {
 				console.error(error);
