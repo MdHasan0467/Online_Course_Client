@@ -11,7 +11,7 @@ const Nav = () => {
 		setShow(!show);
 	};
 
-	const handlelogOut = () => {
+	const handleLogOut = () => {
 		logOut()
 			.then(() => { })
 		.catch(error => console.error(error))
@@ -118,17 +118,17 @@ const Nav = () => {
 					<ul className='menu menu-horizontal p-0'>
 						<Link to='/home'>
 							<li>
-								<a>Home</a>
+								<a className='hover:text-orange-600'>Home</a>
 							</li>
 						</Link>
 						<Link to='/courses'>
 							<li>
-								<a>Courses</a>
+								<a className='hover:text-orange-600'>Courses</a>
 							</li>
 						</Link>
-						<Link to='/blog'>
+						<Link to=''>
 							<li>
-								<a>Blog</a>
+								<a className='hover:text-orange-600'>Blog</a>
 							</li>
 						</Link>
 					</ul>
@@ -158,7 +158,7 @@ const Nav = () => {
 									<a>Settings</a>
 								</li>
 								<li>
-									<a onClick={handlelogOut}>Logout</a>
+									<a onClick={handleLogOut}>Logout</a>
 								</li>
 							</ul>
 						</div>

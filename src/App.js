@@ -1,11 +1,11 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
+import Details from './components/Aside/Details/Details';
 import Blog from './components/Blog/Blog';
 import Courses from './components/Courses/Courses';
 import Home from './components/Home/Home';
 import Login from './components/Login/Login';
 import SignUp from './components/SignUp/SignUp';
-import Topics from './components/Topics/Topics';
 import Main from './layouts/Main/Main';
 
 function App() {
@@ -23,6 +23,10 @@ function App() {
 					element: <Home></Home>,
 				},
 				{
+					path: '/blog',
+					element: <Blog></Blog>,
+				},
+				{
 					path: '/login',
 					element: <Login></Login>,
 				},
@@ -32,28 +36,17 @@ function App() {
 				},
 				{
 					path: '/courses',
-					loader: () => fetch('http://localhost:5000/courses'),
 					element: <Courses></Courses>,
+					loader: () =>
+						fetch(`https://assignment-ten-server-bice.vercel.app/courses`),
 				},
-
 				{
-					path: '/topics/:id',
+					path: '/course/:id',
+					element: <Details></Details>,
 					loader: ({ params }) =>
-						fetch(`http://localhost:5000/courses/${params.id}`),
-					element: <Topics></Topics>,
-				},
-					{
-						path: '/course/checkout/:id',
-						loader: ({ params }) =>
-							fetch(
-								`http://localhost:5000/courses/course/${params.id}`
-							),
-						element : <Checkout></Checkout>
-					},
-
-				{
-					path: '/blog',
-					element: <Blog></Blog>,
+						fetch(
+							`https://assignment-ten-server-bice.vercel.app/courses/${params.id}`
+						),
 				},
 			],
 		},

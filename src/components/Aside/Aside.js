@@ -2,13 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Aside = ({ course }) => {
-	const {id} = course
 	return (
 		<li className='bg-blue-700 text-white'>
 			<Link
-				to={`/topics/${id}`}
 				rel='noopener noreferrer'
-				href='#'
+				to={`/course/${course.id}`}
 				className='flex items-center p-2 space-x-3 rounded-md hover:text-fuchsia-700 font-semibold'
 			>
 				<svg
