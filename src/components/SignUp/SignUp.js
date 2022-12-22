@@ -84,7 +84,7 @@ const SignUp = () => {
 				)}
 			</div>
 			<section className='text-gray-600  body-font flex justify-center'>
-				<div className='w-72 shadow-lg shadow-slate-700 p-5  rounded-lg'>
+				<div className='w-72 shadow-lg shadow-slate-700 p-5  mb-20 rounded-lg'>
 					<h2 className='text-gray-900 text-lg text-center font-medium title-font mb-5'>
 						Sign Up Now !
 					</h2>
@@ -139,14 +139,14 @@ const SignUp = () => {
 						<Link to='/login'>
 							<a
 								href='#'
-								className='text-xs hover:underline text-gray-500 mt-3'
+								className='text-xs hover:underline text-gray-500 hover:text-blue-500 mt-3'
 							>
 								Already have an account?
 							</a>
 						</Link>
 						<br />
 						<br />
-						<button className='text-white w-full bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg'>
+						<button className='text-white w-full btn-secondary border-0 py-2 px-8 focus:outline-none rounded text-lg'>
 							Sign Up
 						</button>
 					</form>

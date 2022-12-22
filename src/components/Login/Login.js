@@ -135,7 +135,7 @@ const Login = () => {
 						<Link to='/signup'>
 							<a
 								href='#'
-								className='text-xs hover:underline text-gray-500 mt-3'
+								className='text-xs hover:underline text-gray-500 hover:text-blue-500 mt-3'
 							>
 								Crteate a new account.
 							</a>

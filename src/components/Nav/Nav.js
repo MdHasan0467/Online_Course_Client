@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import { authContext } from '../../context/AuthProvider';
 // import { BsMoonFill, BsSunFill } from 'react-icons/bs';
@@ -8,13 +8,15 @@ import { authContext } from '../../context/AuthProvider';
 const Nav = () => {
 	const [show, setShow] = useState();
 	const { user, logOut } = useContext(authContext);
+	const navigate = useNavigate()
 	const ToggleData = () => {
 		setShow(!show);
 	};
 
 	const handleLogOut = () => {
+		navigate('/login');
 		logOut()
-			.then(() => { })
+			.then(() => {})
 		.catch(error => console.error(error))
 	}
 	return (
