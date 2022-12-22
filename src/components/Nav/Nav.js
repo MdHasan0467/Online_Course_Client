@@ -48,11 +48,7 @@ const Nav = () => {
 									<a>Home</a>
 								</li>
 							</Link>
-							<Link to='/courses'>
-								<li>
-									<a>Courses</a>
-								</li>
-							</Link>
+							
 							<Link to='/blog'>
 								<li>
 									<a>Blog</a>
@@ -232,11 +228,6 @@ const Nav = () => {
 								<a className=' hover:text-secondary'>Home</a>
 							</li>
 						</Link>
-						<Link to='/courses'>
-							<li>
-								<a className=' hover:text-secondary'>Courses</a>
-							</li>
-						</Link>
 						<Link to='/blog'>
 							<li>
 								<a className=' hover:text-secondary'>Blog</a>
@@ -255,7 +246,7 @@ const Nav = () => {
 					</ul>
 				</div>
 				<div className='navbar-end'>
-					{user ? (
+					{user ?
 						<div className='dropdown dropdown-end'>
 							<label tabIndex={0} className='btn btn-ghost btn-circle avatar'>
 								<div className='w-[50px] rounded-full'>
@@ -282,11 +273,11 @@ const Nav = () => {
 								</li>
 							</ul>
 						</div>
-					) : (
+					 : 
 						<Link to='/login'>
 							<button className='btn btn-secondary'>Login</button>
 						</Link>
-					)}
+					}
 				</div>
 			</div>
 		</div>

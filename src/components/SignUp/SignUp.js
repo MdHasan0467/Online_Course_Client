@@ -44,7 +44,7 @@ const SignUp = () => {
 			.then((result) => {
 				const user = result.user;
 				console.log(user);
-				
+
 				setSuccess(true);
 				form.reset();
 				emailVerify();
@@ -55,7 +55,6 @@ const SignUp = () => {
 				console.error(error);
 				setPasswordError(error.message);
 			});
-		
 	};
 
 	const emailVerify = () => {

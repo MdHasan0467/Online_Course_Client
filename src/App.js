@@ -7,7 +7,6 @@ import Contact from './components/Contact/Contact';
 import Courses from './components/Courses/Courses';
 import Error from './components/Error/Error';
 import FAQ from './components/FAQ/FAQ';
-import Home from './components/Home/Home';
 import Login from './components/Login/Login';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import SignUp from './components/SignUp/SignUp';
@@ -21,11 +20,15 @@ function App() {
 			children: [
 				{
 					path: '/',
-					element: <Home></Home>,
+					element: <Courses></Courses>,
+					loader: () =>
+						fetch(`https://assignment-ten-server-bice.vercel.app/courses`),
 				},
 				{
 					path: '/home',
-					element: <Home></Home>,
+					element: <Courses></Courses>,
+					loader: () =>
+						fetch(`https://assignment-ten-server-bice.vercel.app/courses`),
 				},
 				{
 					path: '/blog',
@@ -59,7 +62,7 @@ function App() {
 				},
 				{
 					path: '/course/:id',
-					element:<Details></Details>,
+					element: <Details></Details>,
 					loader: ({ params }) =>
 						fetch(
 							`https://assignment-ten-server-bice.vercel.app/course/${params.id}`

@@ -11,13 +11,16 @@ import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 
 const Login = () => {
 	// const [userEmail, setUserEmail] = useState('');
-	const [success, setSuccess] = useState(false);
-	const [passwordError, setPasswordError] = useState('');
-	const navigate = useNavigate();
-	const location = useLocation();
-	const from = location.state?.form?.pathname || '/';
 	const { logIn, googleSignUp, githubSignUp, facebookSignUp } =
 		useContext(authContext);
+	const [success, setSuccess] = useState(false);
+	const [passwordError, setPasswordError] = useState('');
+	
+	const navigate = useNavigate();
+	const location = useLocation();
+	const from = location.state?.from?.pathname || '/';
+	//!......................................
+	//!......................................
 
 	//! Google Log In....
 	const googleSignIn = () => {
@@ -25,13 +28,12 @@ const Login = () => {
 			.then((result) => {
 				const user = result.user;
 				console.log(user);
+				// navigate(`${from}`);
 				navigate(from, { replace: true });
 			})
 			.catch((error) => console.error(error));
 	};
 	//!......................................
-
-
 
 	//! Github Log In....
 	const githubSignIn = () => {
@@ -39,13 +41,11 @@ const Login = () => {
 			.then((result) => {
 				const user = result.user;
 				console.log(user);
-				navigate(from, { replace: true });
+				navigate(`${from}`);
 			})
 			.catch((error) => console.log(error));
 	};
 	//!......................................
-
-
 
 	//! Facebook Log In.....
 	const fbSignIn = () => {
@@ -53,13 +53,12 @@ const Login = () => {
 			.then((result) => {
 				const user = result.user;
 				console.log(user);
-				navigate(from, { replace: true });
+				navigate(`${from}`);
 			})
 			.catch((error) => console.log(error));
 	};
 	//!......................................
 
-	
 	//! Form Log In...
 	const submitBtn = (e) => {
 		e.preventDefault();
@@ -78,7 +77,8 @@ const Login = () => {
 				console.log(user);
 				setSuccess(true);
 				form.reset();
-				navigate(from, { replace: true });
+				// navigate(from, { replace: true });
+				navigate(`${from}`);
 			})
 			.catch((error) => {
 				console.error(error);

@@ -1,23 +1,14 @@
 import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
-import Pdf from 'react-to-pdf';
-import { FaFileDownload } from 'react-icons/fa';
 
-const ref = React.createRef();
+
 const Details = () => {
 	const courseDetails = useLoaderData();
 	const { id, image, name, course_fee, details } = courseDetails;
 	return (
 		<div className=' p-6 overflow-hidden py-10 shadow bg-gray-900 text-gray-100 mx-auto'>
-			<Pdf targetRef={ref} filename='code-example.pdf'>
-				{({ toPdf }) => (
-					<button onClick={toPdf}>
-						<FaFileDownload className='text-secondary text-2xl mx-5'></FaFileDownload>
-					</button>
-				)}
-			</Pdf>
-			<div className='mt-2' ref={ref}>
-				<Link herf='/foldername/file'>
+			
+			<Link src='.'></Link>
 					<div className=' p-6 overflow-hidden py-10 shadow bg-gray-900 text-gray-100 mx-auto'>
 						<article>
 							<img className='w-72 mx-auto my-4' src={image} alt='' />
@@ -48,9 +39,7 @@ const Details = () => {
 								</Link>
 							</div>
 						</article>
-					</div>
-				</Link>
-			</div>
+				</div>		
 		</div>
 	);
 };
